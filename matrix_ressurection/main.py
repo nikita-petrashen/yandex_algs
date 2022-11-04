@@ -39,6 +39,7 @@ def build_graph(matrix):
     return adj_list, rev_adj_list, start_nodes
 
 
+# recursive topological sort will lead to overflow
 def topological_sort(adj_list):
     visited = [False] * len(adj_list)
     sorted_nodes = []
