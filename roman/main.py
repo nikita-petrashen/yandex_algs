@@ -1,5 +1,5 @@
 from collections import Counter
-_VALID_LETTERS = {"I", "V", "X", "L", "C", "D", "M"}
+
 NUMS = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 IDXS = {"I": 0, "V": 1, "X": 2, "L": 3, "C": 4, "D": 5, "M": 6}
 THREE_CONS_RESTR = {"I", "X", "C", "M"}
@@ -30,7 +30,7 @@ def is_descending(number):
         else:
             small_num, big_num = chunk
             small_idx, big_idx = IDXS[small_num], IDXS[big_num]
-            if small_idx >= cur_idx or big_idx > cur_idx:
+            if big_idx > cur_idx + 1:
                 return False
             else:
                 cur_idx = small_idx - 1
@@ -160,6 +160,10 @@ print(f"{roman_number}:", convert_to_arabic(roman_number))
 
 # 294
 roman_number = "CCXCIV"
+print(f"{roman_number}:", convert_to_arabic(roman_number))
+
+# 999
+roman_number = "CMXCIX"
 print(f"{roman_number}:", convert_to_arabic(roman_number))
 
 
