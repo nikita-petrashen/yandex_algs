@@ -1,2 +1,4 @@
 # yandex_algs
-Contest from Yandex ALgorithmic Interview course.
+My solutions to the [contest](https://contest.yandex.ru/contest/36783) from Yandex Algorithmic Interview [course](https://practicum.yandex.ru/trainer/algorithms-interview).
+
+Note that some solutions don't pass the time limit.
